@@ -1,0 +1,25 @@
+{
+  "en": {
+    "signupWindowTitle":                "Sign Up",
+    "signupMessage":                    "Sign up with email address",
+    "nameLabel":                        "Your Name",
+    "namePlaceholder":                  "Your Name",
+    "organizationNameLabel":            "Organization Name",
+    "organizationNamePlaceholder":      "Organization Name",
+    "phoneNumberLabel":                 "Phone Number",
+    "phoneNumberPlaceholder":           "Phone Number",
+    "requestPromotionLabel":            "Please check if you request for more information.",
+    "commentLabel":                     "Comments/Questions",
+    "commentPlaceholder":               "Feel free to put any comments or questions.",
+    "emailLabel":                       "Email",
+    "emailPlaceholder":                 "Email",
+    "passwordLabel":                    "Password",
+    "passwordPlaceholder":              "Password",
+    "passwordConfirmationLabel":        "Password (Confirm)",
+    "passwordConfirmationPlaceholder":  "Enter again",
+    "signupButton":                     "Sign Up",
+    "signupCompletedMessage":           "Completed!",
+    "loginLinkMessage":                 "Already a member? Log in here!",
+    "signupAgreementMessage":           "By clicking on Sign Up, you agree to Datavase terms & conditions and privacy policy."
+  }
+}

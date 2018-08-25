@@ -1,0 +1,16 @@
+.title {
+   font-size: 120px;
+   text-align: center;
+   padding-top: 160px;
+   color: #cc3300;
+}
+
+.login-button {
+   padding-top: 60px;
+   text-align: center;
+}
+
+.signup-button {
+   padding-top: 60px;
+   text-align: center;
+}

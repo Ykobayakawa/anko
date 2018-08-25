@@ -1,0 +1,15 @@
+.login-form {
+   padding-top: 100px;
+   padding-left: 350px;
+   padding-right: 350px;
+}
+
+.login-form-panel {
+   text-align: center;
+   color: blue;
+}
+
+.login-form-title {
+   font-size: 25px;
+   text-align: center;
+}
