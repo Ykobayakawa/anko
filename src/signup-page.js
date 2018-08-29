@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Panel, Button, Col, Form, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import * as AnkoApi from './anko-api';
 import './css/signup-form.css';
 import i18n from './i18n/signup-page.json';
@@ -9,6 +11,7 @@ class SignupPage extends Component {
       super(props);
       this._onFormChange = this._onFormChange.bind(this);
       this._signup = this._signup.bind(this);
+      this._constructErrorsList = this._constructErrorsList.bind(this);
       this.state = {
          isSigningUp: false,
          hasSignedUp: false,
@@ -35,6 +38,7 @@ class SignupPage extends Component {
       const params = {user: this.state.user};
       AnkoApi.signup(params)
       .then(res => {
+         console.log(params);
          this.setState({
             isSigningUp: false,
             hasSignedUp: true,
@@ -43,8 +47,8 @@ class SignupPage extends Component {
       })
       .catch(res => {
          let errorMessages = [];
-         if(res.response.errors) {
-            errorMessages = res.response.errors.full_messages;
+         if(res.response.data.errors) {
+            errorMessages = res.response.data.errors.full_messages;
          }
          this.setState({
             isSigningUp: false,
@@ -144,19 +148,17 @@ class SignupPage extends Component {
 
                   <FormGroup>
                   <Col smOffset={2} sm={10}>
-                  <Button type="submit"
-                          onClick={this._signup}>Sign up</Button>
+                  <Button onClick={this._signup}>Sign up</Button>
                   </Col>
                   </FormGroup>
                </Form>
                }
+            <h2>{this.state.user.name}</h2>
             </Panel.Body>
-         <h2>{this.state.user.name}</h2>
-         <h2>{this.state.user.email}</h2>
-         <h2>{this.state.user.tel}</h2>
-         <h2>{this.state.user.password}</h2>
-         <h2>{this.state.user.password_confirmation}</h2>
          </Panel>
+         <div style={{textAlign: 'center'}}>
+         <Link to="/login">log in</Link>
+         </div>
          </div>
       );
    }
